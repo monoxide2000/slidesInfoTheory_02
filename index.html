@@ -77,7 +77,7 @@
 			      <ul>
 			      	<li class="fragment">Primero, una variable aleatoria no es un variable sino una función.</li>
 			      	<li class="fragment">Se define sobre un espacio de probabilidad $(\Omega, \mathcal{F}, P)$.</li>
-			      	<li class="fragment">Es decir una variable aleatoria $X$, es una función sobre $\Omega$ hacía los números reales $\mathbb{R}$.</li>
+			      	<li class="fragment">Es decir, una variable aleatoria $X$ es una función sobre $\Omega$ hacía los números reales $\mathbb{R}$.</li>
 			      </ul>
 				</section>
 
@@ -89,8 +89,8 @@
 										</div>
 										<div class="def-block-eq">
 										<p style="padding:0; margin:5px;">
-											Una variable aleatoria $X$ en un espacio de probabilidad $(\Omega, \mathcal{F},P)$ es un mapeo de $\Omega$ a
-											$\mathbb{R}$, es decir $X:\Omega \to \mathbb{R}$
+											Una variable aleatoria $X$, en un espacio de probabilidad $(\Omega, \mathcal{F},P)$, es un mapeo de $\Omega$ a
+											$\mathbb{R}$, es decir, $X:\Omega \to \mathbb{R}$
 											<br><br>
 											$\Omega$ es el dominio de la variable aleatoria y $\mathbb{R}$ su rango.
 									</div>
@@ -106,7 +106,7 @@
 				<section data-transition="zoom">
 					<h2>Variables aleatorias</h2>
 					<ul>
-						<li class="fragment">Dependiendo de los valores del rango, la variables aleatorias pueden clasificarse como discretas, continuas y mixtas</li>
+						<li class="fragment">Dependiendo de los valores del rango, la variables aleatorias pueden clasificarse como; discretas, continuas y mixtas</li>
 						<li class="fragment">Usualmente, las variables aleatorias se describen con mayúsculas como $X,Y,Z, W, V$, etc.</li>
 						<li class="fragment">Lo valores de una variable aleatoria se nombran con letras minúsculas, e.g., $x,y,z,w,v$.</li>
 					</ul>
@@ -131,11 +131,11 @@
 				<section data-transition="zoom">
 					<h2>Variables aleatorias</h2>
           <h3 style="text-transform: capitalize; text-align: left;">Condiciones de existencia:</h3>
-					<p style="text-align: left;">Para que $X$ sea considerada una variable aleatoria se tiene que cumplir:</p>
+					<p style="text-align: left;">Para que $X$ sea considerada una variable aleatoria se tiene que cumplir que:</p>
 					<ul>
-						<li class="fragment">El evento $\{X \le x\}$ sea un evento.</li>
+						<li class="fragment">El conjunto $\{X \le x\}$, es un evento.</li>
 						<li class="fragment">La probabilidades de $\{X=+\infty\}$ y $\{X=-\infty\}$ son:<br>
-						$P(X=+\infty) = P(X=-\infty) = 0$</li>
+						$$P(X=+\infty) = P(X=-\infty) = 0$$</li>
 					</ul>
 				</section>
 
@@ -146,9 +146,9 @@
           <h3 style="text-align: left;">CDF, PDF y PMF</h3>
 					<p style="text-align: left;">Las variables aleatorias quedan especificadas por:</p>
 					<ul>
-						<li class="fragment">La función de distribución acumulativa (CDF)</li>
-						<li class="fragment">Si $X$ es continua, por la función de densidad de probabilidad (PDF)</li>
-						<li class="fragment">Si $X$ es discreta, por la función de masa de probabilidad (PMF)</li>
+						<li class="fragment">La función de distribución acumulativa (CDF).</li>
+						<li class="fragment">Si $X$ es continua, por la función de densidad de probabilidad (PDF).</li>
+						<li class="fragment">Si $X$ es discreta, por la función de masa de probabilidad (PMF).</li>
 					</ul>
 				</section>
 
@@ -160,9 +160,9 @@
 								</div>
 								<div class="def-block-eq">
 								<p style="padding:0; margin:5px;">
-									La función de distribución de una variable aleatoria $X$ es la función:
+									La función de distribución de una variable aleatoria $X$ es la función definida como:
 									$$
-									F_X(x) = \left\{ X \le x\right\},
+									F_X(x) = P\left\{ X \le x\right\},
 									$$
 									<br>
 									definida para cualquier número $x$ de $-\infty$ a $+\infty$.
@@ -175,9 +175,9 @@
 					<p style="text-align: left;">Propiedades de la CDF:</p>
 					<ul>
 						<li class="fragment">$0 \le F_X(x) \le 1$</li>
-						<li class="fragment">$F_X(-\infty) = F_X(+\infty)=0$</li>
+						<li class="fragment">$F_X(-\infty) =0 $ y $ F_X(+\infty)=1$</li>
 						<li class="fragment">Si $x_1 < x_2$ entonces $F_X(x_1) \le F_X(x_2)$</li>
-						<li class="fragment">$P(a < X \le b) = F_X(b) -F_X(a)$, $a< b$</li>
+						<li class="fragment">$P(a < X \le b) = F_X(b) -F_X(a) \;$  $a< b$</li>
 						<li class="fragment">$P(X>a) = 1-F_X(a)$</li>
 					</ul>
 				</section>
@@ -188,7 +188,7 @@
 					<p style ="text-align: left; font-size:0.8em;"> Sea $X$ una variable aleatoria con distribución:
 					$$
 					F_X(x) = \begin{cases}
-					0 & x < -4\\
+					0 & x < -1\\
 					1/4 & -1 \le x < 1\\
 					1/2 & 1 \le x < 3\\
 					3/4 & 3 \le x < 5\\
@@ -196,13 +196,13 @@
 					\end{cases}
 					$$
 					Calcular $P(-1 < X \le 1.5)$ y $P(X\ge 1)$ </p>
-					<p class="fragment" style ="text-align: left; color:green; font-size:0.8em;"><span style="color: blue;">Solución:</span> Recordemos que $P(X\le b) = F_x(b)$
-					, por lo tanto:
+					<p class="fragment" style ="text-align: left; color:green; font-size:0.7em;"><span style="color: blue;">Solución:</span> Recordemos que; $P(a < X\le b) = F_X(b)-F_X(a)$,
+					por lo tanto:
 					$$
-					P(X \le 3) =  F_X(3) = 3/4
+					P(-1 < X \le 1.5) =  F_X(1.5)- F_X(-1) = 1/2- 1/4= 1/4
 					$$</p>
-					<p class="fragment" style ="text-align: left; color:green; font-size:0.8em;"><span style="color: blue;">Solución:</span> Recordemos que $P(X\ge b) = 1-F_x(b)+P(X=b)$
-					, por lo tanto:
+					<p class="fragment" style ="text-align: left; color:green; font-size:0.7em;"><span style="color: blue;">Solución:</span> Recordemos que; $P(X\ge b) = 1-F_x(b)+P(X=b)$,
+					por lo tanto:
 					$$
 					P(X \le 1) = 1-F_X(1)+P(X=1) = 1-1/2+1/4 = 3/4
 					$$</p>
@@ -219,7 +219,7 @@
 					\end{cases}
 				  $$
 				  Calcular $P(-1 < X \le 1.5)$ </p>
-					<p class="fragment" style ="text-align: left; color:green; font-size:0.8em"><span style="color: blue;">Solución:</span> Recordemos que $P(a < X \le b) = F_x(b)-F_x(a)$
+					<p class="fragment" style ="text-align: left; color:green; font-size:0.8em"><span style="color: blue;">Solución:</span> Recordemos que $P(a < X \le b) = F_X(b)-F_X(a)$
 					, por lo tanto:
           $$\begin{align}
 					P(-1 < X \le 1.5) = & F_X(1.5)- F_X(-1)\\
@@ -278,7 +278,7 @@
 						f_X(x) = \begin{cases}
 						x & 0 < x < 1\\
 						2-x & 1 \le x < 2\\
-						0 & x \mbox{en otro caso}
+						0 & \mbox{en otro caso}
 						\end{cases}
 					  $$
 					  Calcular $P(0.2 < X \le 0.8)$ </p>
